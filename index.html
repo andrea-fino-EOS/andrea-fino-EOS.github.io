@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formazione Interna</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <!-- LOGIN SCREEN -->
+  <section id="login-view" class="login-wrapper">
+    <div class="login-card glass">
+      <div class="login-header">
+        <div class="app-logo">
+          <div class="app-logo-icon">🎓</div>
+          <div class="app-logo-text">
+            <div class="company">Academy</div>
+            <div class="product">Formazione 2025</div>
+          </div>
+        </div>
+        <h2>Benvenuto 👋</h2>
+        <p class="muted">
+          Accedi per vedere i tuoi corsi e prenotarti alle prossime sessioni.
+        </p>
+      </div>
+
+      <div class="form-group">
+        <label for="user">Nome</label>
+        <input id="user" placeholder="Es. Mario Rossi" autocomplete="username" />
+      </div>
+
+      <div class="form-group">
+        <label for="pass">Password</label>
+        <input
+          id="pass"
+          type="password"
+          placeholder="Inserisci la tua password"
+          autocomplete="current-password"
+        />
+      </div>
+
+      <button class="btn-primary full" id="login-btn">Entra</button>
+
+      <p id="login-error" class="error-msg"></p>
+
+      <div class="login-footnote muted">
+        <small>
+          Hai problemi di accesso? Contatta HR / Formazione.
+        </small>
+      </div>
+    </div>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section id="dashboard-view" class="page" style="display:none;">
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="top-left">
+        <div class="app-logo small">
+          <div class="app-logo-icon">🎓</div>
+          <div class="app-logo-text">
+            <div class="company">Academy</div>
+            <div class="product">Formazione 2025</div>
+          </div>
+        </div>
+      </div>
+      <div class="top-right">
+        <div class="user-chip">
+          <div class="user-info">
+            <div class="user-name" id="username-label">Utente</div>
+            <div class="user-role" id="user-role-label">Piano formativo personale</div>
+          </div>
+        </div>
+        <button class="btn-ghost" id="logout-btn">Esci</button>
+      </div>
+    </header>
+
+    <!-- Content grid -->
+    <main class="dashboard-grid">
+      <!-- CARD: I MIEI CORSI -->
+      <section class="card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <h3 class="card-title">I miei corsi</h3>
+            <span class="badge" id="badge-miei-corsi">0</span>
+          </div>
+          <p class="card-subtitle">
+            Questi sono i corsi a cui risulti già assegnato o prenotato.
+          </p>
+        </div>
+
+        <ul class="course-list" id="my-courses-list">
+          <!-- JS riempie -->
+        </ul>
+
+        <div class="empty-state" id="my-courses-empty" style="display:none;">
+          <div class="empty-emoji">📝</div>
+          <div class="empty-title">Ancora nessuna prenotazione</div>
+          <div class="empty-desc">
+            Quando ti prenoti a un corso, lo vedrai qui.
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD: PRENOTA UN CORSO -->
+      <section class="card">
+        <div class="card-header">
+          <div class="card-title-row">
+            <h3 class="card-title">Prenota un corso</h3>
+          </div>
+          <p class="card-subtitle">
+            Corsi disponibili per te ai quali non sei ancora iscritto.
+          </p>
+        </div>
+
+        <ul class="course-list" id="available-courses-list">
+          <!-- JS riempie -->
+        </ul>
+
+        <div class="empty-state" id="available-courses-empty" style="display:none;">
+          <div class="empty-emoji">✅</div>
+          <div class="empty-title">Sei già iscritto a tutti i corsi disponibili</div>
+          <div class="empty-desc">
+            Contatta HR se vuoi proporre nuovi corsi.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Toast/feedback -->
+    <div id="toast" class="toast" style="display:none;"></div>
+  </section>
+  
+  <!-- Loader overlay -->
+  <div id="loader-overlay" class="loader-overlay" style="display:none;">
+    <div class="loader">
+      <div class="spinner"></div>
+      <p>Caricamento in corso...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
