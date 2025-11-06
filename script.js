@@ -98,7 +98,7 @@ function renderDashboard() {
         </div>
         <div class="course-meta">
           <div><strong>Iscrizione:</strong> ${c.type}</div>
-          <div><strong>Data:</strong> ${formatDate(c.bookingDate)}</div>
+          <div><strong>Data prenotazione:</strong> ${formatDate(c.bookingDate)}</div>
 		  <div><strong>Stato:</strong> ${c.status}</div>
         </div>
       `;
