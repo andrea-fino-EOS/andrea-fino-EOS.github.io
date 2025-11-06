@@ -1,5 +1,5 @@
 // ✅ METTI QUI L'URL DELL'APPS SCRIPT PUBBLICATO
-const API_URL = "https://script.google.com/macros/s/AKfycbx09berEjiGXwlKQ15wVS78Osn3h7gntd-ATmIFD1tjoe-JJh1THG_inFJNNFWmJlOuRw/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbw367hLJen-Ieo5rD1EInM4DcOYQFuOBADYo_mJqvql0hPk4wGounrIxL0WprhpsVR4UQ/exec";
 
 let currentUser = null;
 let currentPass = null;
